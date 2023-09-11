@@ -1,5 +1,6 @@
-import { HStack, Text } from "@chakra-ui/react";
+import { Flex, HStack, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
+import { GiWoodStick } from "react-icons/gi";
 
 export default function Navbar() {
   const [displayText, setDisplayText] = useState("");
@@ -26,29 +27,79 @@ export default function Navbar() {
 
   return (
     <HStack
+      flexDir={["column", "column", "column", "column", "row"]}
       justifyContent={"center"}
       justifyItems={"center"}
       justify={"space-between"}
-      p={16}
+      py={16}
     >
-      <Text
-        flexBasis={"50%"}
+      <Flex
+        align={"center"}
+        flexBasis={"40%"}
+        gap={2}
         fontWeight={700}
-        fontSize={30}
+        fontSize={[22, 22, 22, 30]}
       >
         {`Creanga ${displayText}${underline ? "_" : ""}`}
-      </Text>
+      </Flex>
       <HStack
         gap={10}
-        flexBasis={"30%"}
+        flexBasis={"50%"}
       >
-        <Text>Regulament</Text>
-        <Text>Volume</Text>
-        <Text>Premii</Text>
-        <Text>Anunturi</Text>
+        <Text
+          _hover={{
+            cursor: "pointer",
+            color: "yellow.300",
+            textDecoration: "underline",
+            transform: "scale(1.1)",
+            transition: "all 0.2s ease-in-out",
+          }}
+        >
+          Regulament
+        </Text>
+        <Text
+          _hover={{
+            cursor: "pointer",
+            color: "yellow.300",
+            textDecoration: "underline",
+            transform: "scale(1.1)",
+            transition: "all 0.2s ease-in-out",
+          }}
+        >
+          Volume
+        </Text>
+        <Text
+          _hover={{
+            cursor: "pointer",
+            color: "yellow.300",
+            textDecoration: "underline",
+            transform: "scale(1.1)",
+            transition: "all 0.2s ease-in-out",
+          }}
+        >
+          Premii
+        </Text>
+        <Text
+          _hover={{
+            cursor: "pointer",
+            color: "yellow.300",
+            textDecoration: "underline",
+            transform: "scale(1.1)",
+            transition: "all 0.2s ease-in-out",
+          }}
+        >
+          Anunturi
+        </Text>
       </HStack>
       <Text
-        flexBasis={"20%"}
+        _hover={{
+          cursor: "pointer",
+          color: "yellow.300",
+          textDecoration: "underline",
+          transform: "scale(1.1)",
+          transition: "all 0.2s ease-in-out",
+        }}
+        flexBasis={"10%"}
         textAlign={"end"}
         justifySelf={"flex-end"}
         decoration={"underline"}

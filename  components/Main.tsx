@@ -45,7 +45,7 @@ export default function Main() {
             shadow={"2xl"}
             bg={"yellow.300"}
           >
-            Inscie-te
+            Inscrie-te
           </Button>
         </motion.div>
         <motion.div

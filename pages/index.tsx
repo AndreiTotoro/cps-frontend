@@ -26,7 +26,7 @@ export default function Home() {
       <Main />
       <Text
         fontSize={12}
-        pt={"5em"}
+        pt={"7em"}
         color={"gray.400"}
       >
         ©️ 2023 Andrei Ciocoiu

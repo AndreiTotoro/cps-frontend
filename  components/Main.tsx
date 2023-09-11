@@ -27,13 +27,14 @@ export default function Main() {
       <Text
         fontSize={26}
         color={"white"}
+        textDecor={"underline"}
       >
         Concursul Interdisciplinar pentru elevii dornici să descopere tainele
-        științei
+        științei.
       </Text>
       <Flex
         gap={5}
-        mt={28}
+        mt={"6em"}
       >
         <motion.div
           whileHover={shakeAnimation} // Apply the animation on hover

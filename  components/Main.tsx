@@ -15,11 +15,11 @@ export default function Main() {
     <Box
       fontWeight={700}
       maxWidth={"37em"}
-      mt={"6.5em"}
+      mt={"6.4em"}
     >
       <Text
         fontSize={40}
-        bg={"yellow.300"}
+        bg={"#fc5310"}
         color={"black"}
       >
         "MAI MULTE ȘTIINȚE, UN SINGUR UNIVERS”
@@ -43,7 +43,7 @@ export default function Main() {
             rounded={0}
             fontSize={26}
             shadow={"2xl"}
-            bg={"yellow.300"}
+            bg={"#fc5310"}
           >
             Inscrie-te
           </Button>

@@ -15,7 +15,7 @@ export default function Home() {
     <Box
       className={spaceMonoFont.className}
       h={"100vh"}
-      bgImage={"bg.jpg"}
+      bgImage={"bg2.jpg"}
       bgSize={["cover"]}
       bgPosition={"center"}
       bgRepeat={"no-repeat"}

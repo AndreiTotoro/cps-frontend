@@ -18,9 +18,10 @@ export default function Main() {
       mt={"6.4em"}
     >
       <Text
+        p={2}
         fontSize={40}
         bg={"#fc5310"}
-        color={"black"}
+        color={"gray.300"}
       >
         "MAI MULTE ȘTIINȚE, UN SINGUR UNIVERS”
       </Text>
@@ -43,6 +44,7 @@ export default function Main() {
             rounded={0}
             fontSize={26}
             shadow={"2xl"}
+            color={"gray.300"}
             bg={"#fc5310"}
           >
             Inscrie-te

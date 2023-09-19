@@ -49,7 +49,7 @@ export default function Navbar() {
         <Text
           _hover={{
             cursor: "pointer",
-            color: "yellow.300",
+            color: "#fc5310",
             textDecoration: "underline",
             transform: "scale(1.1)",
             transition: "all 0.2s ease-in-out",
@@ -60,7 +60,7 @@ export default function Navbar() {
         <Text
           _hover={{
             cursor: "pointer",
-            color: "yellow.300",
+            color: "#fc5310",
             textDecoration: "underline",
             transform: "scale(1.1)",
             transition: "all 0.2s ease-in-out",
@@ -71,7 +71,7 @@ export default function Navbar() {
         <Text
           _hover={{
             cursor: "pointer",
-            color: "yellow.300",
+            color: "#fc5310",
             textDecoration: "underline",
             transform: "scale(1.1)",
             transition: "all 0.2s ease-in-out",
@@ -82,7 +82,7 @@ export default function Navbar() {
         <Text
           _hover={{
             cursor: "pointer",
-            color: "yellow.300",
+            color: "#fc5310",
             textDecoration: "underline",
             transform: "scale(1.1)",
             transition: "all 0.2s ease-in-out",
@@ -94,7 +94,7 @@ export default function Navbar() {
       <Text
         _hover={{
           cursor: "pointer",
-          color: "yellow.300",
+          color: "#fc5310",
           textDecoration: "underline",
           transform: "scale(1.1)",
           transition: "all 0.2s ease-in-out",

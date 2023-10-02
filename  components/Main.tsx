@@ -15,18 +15,19 @@ export default function Main() {
     <Box
       fontWeight={700}
       maxWidth={"37em"}
-      mt={"6.4em"}
+      mt={["1em", "1em", "1em", "6.4em"]}
     >
       <Text
         p={2}
-        fontSize={40}
+        fontSize={[30, 30, 30, 40]}
         bg={"black"}
         color={"white"}
       >
         "MAI MULTE ȘTIINȚE, UN SINGUR UNIVERS”
       </Text>
       <Text
-        fontSize={26}
+        fontSize={[20, 20, 20, 26]}
+        pt={[10, 10, 10, 0]}
         color={"white"}
         textDecor={"underline"}
       >
@@ -34,6 +35,7 @@ export default function Main() {
         științei.
       </Text>
       <Flex
+        flexDir={["column", "column", "column", "row"]}
         gap={5}
         mt={"6em"}
       >
@@ -44,7 +46,8 @@ export default function Main() {
             rounded={0}
             fontSize={26}
             shadow={"2xl"}
-            color={"gray.300"}
+            color={"white"}
+            w={"100%"}
             bg={"#fc5310"}
           >
             Inscrie-te
@@ -60,6 +63,7 @@ export default function Main() {
             border={"1px solid white"}
             _hover={{ color: "black", bg: "white" }}
             shadow={"2xl"}
+            w={"100%"}
             bg={"none"}
           >
             Regulament

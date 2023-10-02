@@ -12,11 +12,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <Container
       maxW={1500}
       className={spaceMonoFont.className}
-      h={"100vh"}
+      minH={"100vh"}
       bgImage={"bg2.jpg"}
       bgSize={["cover"]}
       bgPosition={"center"}
-      bgRepeat={"repeat"}
+      bgRepeat={"no-repeat"}
       color={"white"}
       px={[7, 7, 7, "5em"]}
     >

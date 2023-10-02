@@ -23,7 +23,7 @@ export default function Main() {
         bg={"black"}
         color={"white"}
       >
-        "MAI MULTE ȘTIINȚE, UN SINGUR UNIVERS”
+        ”MAI MULTE ȘTIINȚE, UN SINGUR UNIVERS”
       </Text>
       <Text
         fontSize={[20, 20, 20, 26]}
@@ -60,11 +60,11 @@ export default function Main() {
             rounded={0}
             fontSize={26}
             color={"white"}
+            bg="none"
             border={"1px solid white"}
             _hover={{ color: "black", bg: "white" }}
             shadow={"2xl"}
             w={"100%"}
-            bg={"none"}
           >
             Regulament
           </Button>

@@ -42,15 +42,15 @@ export default function Navbar() {
       justify={"space-between"}
       py={[10, 10, 10, 16]}
     >
-      <Flex
-        align={"center"}
+      <Link
+        href="./"
         flexBasis={["60%", "60%", "60%", "40%"]}
         gap={2}
         fontWeight={700}
         fontSize={[24, 24, 24, 30]}
       >
         {`Creanga ${displayText}${underline ? "_" : ""}`}
-      </Flex>
+      </Link>
       <HStack
         display={["none", "none", "none", "flex"]}
         gap={10}

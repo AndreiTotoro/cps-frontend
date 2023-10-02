@@ -7,7 +7,7 @@ export default function Regulament() {
     <Layout>
       <Stack>
         <Text
-          color={"black"}
+          color={"white"}
           fontSize={"4xl"}
           fontWeight={"bold"}
         >

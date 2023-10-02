@@ -46,66 +46,30 @@ export default function Navbar() {
         gap={10}
         flexBasis={"50%"}
       >
-        <Text
-          _hover={{
-            cursor: "pointer",
-            color: "#fc5310",
-            textDecoration: "underline",
-            transform: "scale(1.1)",
-            transition: "all 0.2s ease-in-out",
-          }}
-        >
-          Regulament
-        </Text>
-        <Text
-          _hover={{
-            cursor: "pointer",
-            color: "#fc5310",
-            textDecoration: "underline",
-            transform: "scale(1.1)",
-            transition: "all 0.2s ease-in-out",
-          }}
-        >
-          Volume
-        </Text>
-        <Text
-          _hover={{
-            cursor: "pointer",
-            color: "#fc5310",
-            textDecoration: "underline",
-            transform: "scale(1.1)",
-            transition: "all 0.2s ease-in-out",
-          }}
-        >
-          Premii
-        </Text>
-        <Text
-          _hover={{
-            cursor: "pointer",
-            color: "#fc5310",
-            textDecoration: "underline",
-            transform: "scale(1.1)",
-            transition: "all 0.2s ease-in-out",
-          }}
-        >
-          Anunturi
-        </Text>
+        <MenuLink text="Regulament" />
+        <MenuLink text="Volume" />
+        <MenuLink text="Premii" />
+        <MenuLink text="Anunturi" />
       </HStack>
-      <Text
-        _hover={{
-          cursor: "pointer",
-          color: "#fc5310",
-          textDecoration: "underline",
-          transform: "scale(1.1)",
-          transition: "all 0.2s ease-in-out",
-        }}
-        flexBasis={"10%"}
-        textAlign={"end"}
-        justifySelf={"flex-end"}
-        decoration={"underline"}
-      >
-        Contact
-      </Text>
+      <MenuLink text="Contact" />
     </HStack>
   );
 }
+
+const MenuLink = ({ text }: {text: string}) => {
+  const [underline, setUnderline] = useState(false);
+
+  return (
+    <Text
+      _hover={{
+        cursor: "pointer",
+        color: "#fc5310",
+        textDecoration: "underline",
+        transform: "scale(1.1)",
+        transition: "all 0.2s ease-in-out",
+      }}
+    >
+      {text}
+    </Text>
+  );
+};

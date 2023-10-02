@@ -1,4 +1,4 @@
-import { Box, Container, Text } from "@chakra-ui/react";
+import { Box, Container, Stack, Text } from "@chakra-ui/react";
 import { Space_Mono } from "next/font/google";
 import React from "react";
 import Navbar from "./Navbar";
@@ -11,26 +11,33 @@ const spaceMonoFont = Space_Mono({
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <Container
-      maxW={1500}
+    <Box
       className={spaceMonoFont.className}
-      minH={"100vh"}
       bgImage={"bg2.jpg"}
-      bgSize={["cover"]}
-      bgPosition={"center"}
       bgRepeat={"no-repeat"}
-      color={"white"}
-      px={[5, 5, 5, "5em"]}
+      bgPos={"center"}
+      bgSize={["cover"]}
     >
-      <Navbar />
-      {children}
-      <Text
-        fontSize={12}
-        pt={"7em"}
-        color={"gray.400"}
+      <Container
+        maxW={1500}
+        color={"white"}
+        px={[5, 5, 5, "5em"]}
       >
-        ©️ 2023 Andrei Ciocoiu
-      </Text>
-    </Container>
+        <Stack
+          minH={"100vh"}
+          justify={"space-between"}
+        >
+          <Navbar />
+          {children}
+          <Text
+            fontSize={12}
+            pt={"7em"}
+            color={"gray.400"}
+          >
+            ©️ 2023 Andrei Ciocoiu
+          </Text>
+        </Stack>
+      </Container>
+    </Box>
   );
 }

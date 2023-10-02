@@ -20,8 +20,8 @@ export default function Main() {
       <Text
         p={2}
         fontSize={40}
-        bg={"#fc5310"}
-        color={"gray.300"}
+        bg={"black"}
+        color={"white"}
       >
         "MAI MULTE ȘTIINȚE, UN SINGUR UNIVERS”
       </Text>

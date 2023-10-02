@@ -3,7 +3,6 @@ import Navbar from "@/ components/Navbar";
 import { Box, Text, VStack } from "@chakra-ui/react";
 
 import { Space_Mono } from "next/font/google";
-import { Roboto } from "next/font/google";
 
 const spaceMonoFont = Space_Mono({
   weight: ["400", "700"],

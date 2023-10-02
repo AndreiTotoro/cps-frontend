@@ -17,9 +17,9 @@ export default function Home() {
       bgImage={"bg2.jpg"}
       bgSize={["cover"]}
       bgPosition={"center"}
-      bgRepeat={"no-repeat"}
+      bgRepeat={"repeat"}
       color={"white"}
-      px={"5em"}
+      px={[7, 7, 7, "5em"]}
     >
       <Navbar />
       <Main />

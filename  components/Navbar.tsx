@@ -1,4 +1,14 @@
-import { Box, Flex, HStack, IconButton, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  HStack,
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Text,
+} from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { GiWoodStick } from "react-icons/gi";
 import { FaBars } from "react-icons/fa";
@@ -28,9 +38,6 @@ export default function Navbar() {
 
   return (
     <HStack
-      flexDir={["column", "column", "column", "column", "row"]}
-      justifyContent={"center"}
-      justifyItems={"center"}
       justify={"space-between"}
       py={16}
     >
@@ -39,11 +46,12 @@ export default function Navbar() {
         flexBasis={"40%"}
         gap={2}
         fontWeight={700}
-        fontSize={[22, 22, 22, 30]}
+        fontSize={[15, 15, 15, 30]}
       >
         {`Creanga ${displayText}${underline ? "_" : ""}`}
       </Flex>
       <HStack
+        display={["none", "none", "none", "flex"]}
         gap={10}
         flexBasis={"50%"}
       >
@@ -52,39 +60,45 @@ export default function Navbar() {
         <MenuLink text="Premii" />
         <MenuLink text="Anunturi" />
       </HStack>
-      <MenuLink text="Contact" />
-      <Menu isLazy>
-        <MenuButton
-          as={IconButton}
-          aria-label="Options"
-          icon={<Box color="white" ><FaBars /></Box>}
-          variant="outline"
-          
-         
-        />
-        <MenuList bg={"orange"}>
-          <MenuItem bg={"orange"}>
-            <MenuLink text="Regulament" />
-          </MenuItem>
-          <MenuItem bg={"orange"}>
-            <MenuLink text="Volume" />
-          </MenuItem >
-          <MenuItem bg={"orange"}>
-            <MenuLink text="Premii" />
-          </MenuItem>
-          <MenuItem bg={"orange"}>
-            <MenuLink text="Anunturi" />
-          </MenuItem>
-          <MenuItem bg={"orange"}>
-            <MenuLink text="Contact" />
-          </MenuItem>
-        </MenuList>
-      </Menu>
+      <Box display={["none", "none", "none", "block"]}>
+        <MenuLink text="Contact" />
+      </Box>
+      <Box display={["block", "block", "block", "none"]}>
+        <Menu isLazy>
+          <MenuButton
+            as={IconButton}
+            aria-label="Options"
+            icon={
+              <Box color="white">
+                <FaBars />
+              </Box>
+            }
+            variant="outline"
+          />
+          <MenuList bg={"orange"}>
+            <MenuItem bg={"orange"}>
+              <MenuLink text="Regulament" />
+            </MenuItem>
+            <MenuItem bg={"orange"}>
+              <MenuLink text="Volume" />
+            </MenuItem>
+            <MenuItem bg={"orange"}>
+              <MenuLink text="Premii" />
+            </MenuItem>
+            <MenuItem bg={"orange"}>
+              <MenuLink text="Anunturi" />
+            </MenuItem>
+            <MenuItem bg={"orange"}>
+              <MenuLink text="Contact" />
+            </MenuItem>
+          </MenuList>
+        </Menu>
+      </Box>
     </HStack>
   );
 }
 
-const MenuLink = ({ text }: {text: string}) => {
+const MenuLink = ({ text }: { text: string }) => {
   const [underline, setUnderline] = useState(false);
 
   return (

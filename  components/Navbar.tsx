@@ -43,10 +43,10 @@ export default function Navbar() {
     >
       <Flex
         align={"center"}
-        flexBasis={["50%", "50%", "50%", "40%"]}
+        flexBasis={["60%", "60%", "60%", "40%"]}
         gap={2}
         fontWeight={700}
-        fontSize={[20, 20, 20, 30]}
+        fontSize={[24, 24, 24, 30]}
       >
         {`Creanga ${displayText}${underline ? "_" : ""}`}
       </Flex>

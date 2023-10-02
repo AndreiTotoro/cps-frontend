@@ -17,23 +17,27 @@ export default function Main() {
       maxWidth={"37em"}
       mt={["1em", "1em", "1em", "6.4em"]}
     >
-      <Text
-        p={2}
-        fontSize={[30, 30, 30, 40]}
-        bg={"black"}
-        color={"white"}
-      >
-        ”MAI MULTE ȘTIINȚE, UN SINGUR UNIVERS”
-      </Text>
-      <Text
-        fontSize={[20, 20, 20, 26]}
-        pt={[10, 10, 10, 0]}
-        color={"white"}
-        textDecor={"underline"}
-      >
-        Concursul Interdisciplinar pentru elevii dornici să descopere tainele
-        științei.
-      </Text>
+      <Box>
+        <Text
+          p={[4, 4, 4, 2]}
+          fontSize={[28, 28, 28, 40]}
+          bg={"black"}
+          color={"white"}
+        >
+          ”MAI MULTE ȘTIINȚE, UN SINGUR UNIVERS”
+        </Text>
+        <Text
+          fontWeight={700}
+          textShadow={"2xl"}
+          fontSize={[24, 24, 24, 26]}
+          pt={[10, 10, 10, 0]}
+          color={"white"}
+          textDecor={"underline"}
+        >
+          Concursul Interdisciplinar pentru elevii dornici să descopere tainele
+          științei.
+        </Text>
+      </Box>
       <Flex
         flexDir={["column", "column", "column", "row"]}
         gap={5}
@@ -43,10 +47,11 @@ export default function Main() {
           whileHover={shakeAnimation} // Apply the animation on hover
         >
           <Button
-            rounded={0}
+            rounded={["2xl", "2xl", "2xl", 0]}
             fontSize={26}
             shadow={"2xl"}
             color={"white"}
+            height={"55px"}
             w={"100%"}
             bg={"#fc5310"}
           >
@@ -57,10 +62,11 @@ export default function Main() {
           whileHover={shakeAnimation} // Apply the animation on hover
         >
           <Button
-            rounded={0}
+            rounded={["2xl", "2xl", "2xl", 0]}
             fontSize={26}
-            color={"white"}
-            bg="none"
+            color={"black"}
+            height={"55px"}
+            bg="white"
             border={"1px solid white"}
             _hover={{ color: "black", bg: "white" }}
             shadow={"2xl"}

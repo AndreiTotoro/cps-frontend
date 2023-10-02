@@ -1,6 +1,8 @@
-import { Box, Container } from "@chakra-ui/react";
+import { Box, Container, Text } from "@chakra-ui/react";
 import { Space_Mono } from "next/font/google";
 import React from "react";
+import Navbar from "./Navbar";
+import Main from "./Main";
 
 const spaceMonoFont = Space_Mono({
   weight: ["400", "700"],
@@ -20,7 +22,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       color={"white"}
       px={[5, 5, 5, "5em"]}
     >
+      <Navbar />
       {children}
+      <Text
+        fontSize={12}
+        pt={"7em"}
+        color={"gray.400"}
+      >
+        ©️ 2023 Andrei Ciocoiu
+      </Text>
     </Container>
   );
 }

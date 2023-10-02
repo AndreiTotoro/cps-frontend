@@ -130,8 +130,6 @@ export default function Navbar() {
 }
 
 const MenuLink = ({ text, link }: { text: string; link: string }) => {
-  const [underline, setUnderline] = useState(false);
-
   return (
     <Link
       href={link}

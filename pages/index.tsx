@@ -1,26 +1,13 @@
+import Layout from "@/ components/Layout";
 import Main from "@/ components/Main";
 import Navbar from "@/ components/Navbar";
 import { Box, Text, VStack } from "@chakra-ui/react";
 
 import { Space_Mono } from "next/font/google";
 
-const spaceMonoFont = Space_Mono({
-  weight: ["400", "700"],
-  subsets: ["latin-ext"],
-});
-
 export default function Home() {
   return (
-    <Box
-      className={spaceMonoFont.className}
-      h={"100vh"}
-      bgImage={"bg2.jpg"}
-      bgSize={["cover"]}
-      bgPosition={"center"}
-      bgRepeat={"repeat"}
-      color={"white"}
-      px={[7, 7, 7, "5em"]}
-    >
+    <Layout>
       <Navbar />
       <Main />
       <Text
@@ -30,6 +17,6 @@ export default function Home() {
       >
         ©️ 2023 Andrei Ciocoiu
       </Text>
-    </Box>
+    </Layout>
   );
 }

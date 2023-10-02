@@ -3,6 +3,7 @@ import {
   Flex,
   HStack,
   IconButton,
+  Link,
   Menu,
   MenuButton,
   MenuItem,
@@ -55,13 +56,28 @@ export default function Navbar() {
         gap={10}
         flexBasis={"50%"}
       >
-        <MenuLink text="Regulament" />
-        <MenuLink text="Volume" />
-        <MenuLink text="Premii" />
-        <MenuLink text="Anunturi" />
+        <MenuLink
+          link="./regulament"
+          text="Regulament"
+        />
+        <MenuLink
+          link="./volume"
+          text="Volume"
+        />
+        <MenuLink
+          link="./premii"
+          text="Premii"
+        />
+        <MenuLink
+          link="./anunturi"
+          text="Anunturi"
+        />
       </HStack>
       <Box display={["none", "none", "none", "block"]}>
-        <MenuLink text="Contact" />
+        <MenuLink
+          text="Contact"
+          link="./contact"
+        />
       </Box>
       <Box display={["block", "block", "block", "none"]}>
         <Menu isLazy>
@@ -77,19 +93,34 @@ export default function Navbar() {
           />
           <MenuList bg={"orange"}>
             <MenuItem bg={"orange"}>
-              <MenuLink text="Regulament" />
+              <MenuLink
+                text="Regulament"
+                link="./regulament"
+              />
             </MenuItem>
             <MenuItem bg={"orange"}>
-              <MenuLink text="Volume" />
+              <MenuLink
+                text="Volume"
+                link="./volume"
+              />
             </MenuItem>
             <MenuItem bg={"orange"}>
-              <MenuLink text="Premii" />
+              <MenuLink
+                text="Premii"
+                link="./premii"
+              />
             </MenuItem>
             <MenuItem bg={"orange"}>
-              <MenuLink text="Anunturi" />
+              <MenuLink
+                text="Anunturi"
+                link="./anunturi"
+              />
             </MenuItem>
             <MenuItem bg={"orange"}>
-              <MenuLink text="Contact" />
+              <MenuLink
+                text="Contact"
+                link="./contact"
+              />
             </MenuItem>
           </MenuList>
         </Menu>
@@ -98,11 +129,12 @@ export default function Navbar() {
   );
 }
 
-const MenuLink = ({ text }: { text: string }) => {
+const MenuLink = ({ text, link }: { text: string; link: string }) => {
   const [underline, setUnderline] = useState(false);
 
   return (
-    <Text
+    <Link
+      href={link}
       _hover={{
         cursor: "pointer",
         color: "#fc5310",
@@ -112,6 +144,6 @@ const MenuLink = ({ text }: { text: string }) => {
       }}
     >
       {text}
-    </Text>
+    </Link>
   );
 };

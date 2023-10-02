@@ -1,6 +1,7 @@
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
+import Link from "next/link";
 
 export default function Main() {
   // Define the animation properties
@@ -61,19 +62,21 @@ export default function Main() {
         <motion.div
           whileHover={shakeAnimation} // Apply the animation on hover
         >
-          <Button
-            rounded={["2xl", "2xl", "2xl", 0]}
-            fontSize={26}
-            color={"black"}
-            height={"55px"}
-            bg="white"
-            border={"1px solid white"}
-            _hover={{ color: "black", bg: "white" }}
-            shadow={"2xl"}
-            w={"100%"}
-          >
-            Regulament
-          </Button>
+          <Link href="./regulament">
+            <Button
+              rounded={["2xl", "2xl", "2xl", 0]}
+              fontSize={26}
+              color={"black"}
+              height={"55px"}
+              bg="white"
+              border={"1px solid white"}
+              _hover={{ color: "black", bg: "white" }}
+              shadow={"2xl"}
+              w={"100%"}
+            >
+              Regulament
+            </Button>
+          </Link>
         </motion.div>
       </Flex>
     </Box>

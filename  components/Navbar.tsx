@@ -1,6 +1,7 @@
-import { Flex, HStack, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, IconButton, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { GiWoodStick } from "react-icons/gi";
+import { FaBars } from "react-icons/fa";
 
 export default function Navbar() {
   const [displayText, setDisplayText] = useState("");
@@ -52,6 +53,33 @@ export default function Navbar() {
         <MenuLink text="Anunturi" />
       </HStack>
       <MenuLink text="Contact" />
+      <Menu isLazy>
+        <MenuButton
+          as={IconButton}
+          aria-label="Options"
+          icon={<Box color="white" ><FaBars /></Box>}
+          variant="outline"
+          
+         
+        />
+        <MenuList bg={"orange"}>
+          <MenuItem bg={"orange"}>
+            <MenuLink text="Regulament" />
+          </MenuItem>
+          <MenuItem bg={"orange"}>
+            <MenuLink text="Volume" />
+          </MenuItem >
+          <MenuItem bg={"orange"}>
+            <MenuLink text="Premii" />
+          </MenuItem>
+          <MenuItem bg={"orange"}>
+            <MenuLink text="Anunturi" />
+          </MenuItem>
+          <MenuItem bg={"orange"}>
+            <MenuLink text="Contact" />
+          </MenuItem>
+        </MenuList>
+      </Menu>
     </HStack>
   );
 }

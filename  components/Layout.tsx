@@ -18,7 +18,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       bgPosition={"center"}
       bgRepeat={"no-repeat"}
       color={"white"}
-      px={[7, 7, 7, "5em"]}
+      px={[5, 5, 5, "5em"]}
     >
       {children}
     </Container>

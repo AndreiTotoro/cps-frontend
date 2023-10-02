@@ -19,7 +19,7 @@ export default function Main() {
     >
       <Box>
         <Text
-          p={[4, 4, 4, 2]}
+          p={[5, 5, 5, 2]}
           fontSize={[28, 28, 28, 40]}
           bg={"black"}
           color={"white"}

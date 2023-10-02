@@ -39,7 +39,7 @@ export default function Navbar() {
   return (
     <HStack
       justify={"space-between"}
-      py={16}
+      py={[10, 10, 10, 16]}
     >
       <Flex
         align={"center"}

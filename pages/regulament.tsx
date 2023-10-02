@@ -19,7 +19,7 @@ export default function Regulament() {
             width={"100%"}
             height={"600px"}
             src={
-              "https://creangaprinstiinte.files.wordpress.com/2022/07/regulament-creanga-prin-stiinte-2022_220711_164437.pdf"
+              "https://creangaprinstiinte.files.wordpress.com/2023/04/regulament-creangaprinstiinte2023.pdf"
             }
           />
         </VStack>

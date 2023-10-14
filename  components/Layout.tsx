@@ -34,7 +34,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             pt={"7em"}
             color={"gray.400"}
           >
-            ©️ 2023 Andrei Ciocoiu
+            ©️ 2023 - Colegiul National Ion Creanga
           </Text>
         </Stack>
       </Container>

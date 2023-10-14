@@ -23,15 +23,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         color={"white"}
         px={[5, 5, 5, "5em"]}
       >
-        <Stack
-          minH={"100vh"}
-          justify={"space-between"}
-        >
+        <Stack minH={"100vh"}>
           <Navbar />
-          {children}
+          <Box flex={1}>{children}</Box>
           <Text
             fontSize={12}
-            pt={"7em"}
+            py={"2em"}
+            justifySelf={"flex-end"}
             color={"gray.400"}
           >
             ©️ 2023 - Colegiul National Ion Creanga

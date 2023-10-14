@@ -47,7 +47,8 @@ export default function Navbar() {
         textDecoration={"underline"}
         flexBasis={["60%", "60%", "60%", "40%"]}
         gap={2}
-        fontWeight={700}
+        fontWeight={"black"}
+        textShadow={"xl"}
         fontSize={[24, 24, 24, 30]}
       >
         {`Creanga prin stiinte`}

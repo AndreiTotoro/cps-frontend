@@ -32,7 +32,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             justifySelf={"flex-end"}
             color={"gray.400"}
           >
-            ©️ 2023 - Colegiul National Ion Creanga
+            ©️ 2023 - Colegiul National Ion Creanga Bucuresti
           </Text>
         </Stack>
       </Container>

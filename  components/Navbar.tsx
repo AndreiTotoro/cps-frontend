@@ -40,7 +40,7 @@ export default function Navbar() {
   return (
     <HStack
       justify={"space-between"}
-      py={[10, 10, 10, 16]}
+      py={[10, 10, 10, "3em"]}
     >
       <Link
         href="./"
@@ -140,6 +140,8 @@ export default function Navbar() {
 const MenuLink = ({ text, link }: { text: string; link: string }) => {
   return (
     <Link
+      fontWeight={"black"}
+      textShadow={"xl"}
       href={link}
       _hover={{
         cursor: "pointer",

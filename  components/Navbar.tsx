@@ -73,7 +73,7 @@ export default function Navbar() {
         />
         <MenuLink
           link="./anunturi"
-          text="Anunturi"
+          text="Anunțuri"
         />
       </HStack>
       <Box display={["none", "none", "none", "block"]}>
@@ -121,7 +121,7 @@ export default function Navbar() {
             </MenuItem>
             <MenuItem bg={"orange"}>
               <MenuLink
-                text="Anunturi"
+                text="Anunțuri"
                 link="./anunturi"
               />
             </MenuItem>

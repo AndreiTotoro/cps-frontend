@@ -51,7 +51,7 @@ export default function Navbar() {
         textShadow={"xl"}
         fontSize={[24, 24, 24, 30]}
       >
-        Creanga<i>...prin stiinte</i>
+        Creanga<i>...prin științe</i>
       </Link>
       <HStack
         display={["none", "none", "none", "flex"]}

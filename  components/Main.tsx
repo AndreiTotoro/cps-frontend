@@ -36,8 +36,8 @@ export default function Main() {
           color={"white"}
           textDecor={"underline"}
         >
-          Concursul Interdisciplinar pentru elevii dornici să descopere tainele
-          științei.
+          Proiectul <i>interdisciplinar</i> pentru elevii dornici să descopere
+          tainele științei.
         </Text>
       </Box>
       <Flex

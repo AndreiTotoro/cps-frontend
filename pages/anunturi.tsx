@@ -17,7 +17,7 @@ export default function Anunturi() {
           textAlign={"center"}
           py={10}
         >
-          Momentan nu exista anunturi noi!
+          Momentan, nu exista anunturi noi!
         </Text>
       </Stack>
     </Layout>

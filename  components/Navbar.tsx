@@ -96,6 +96,12 @@ export default function Navbar() {
           <MenuList bg={"orange"}>
             <MenuItem bg={"orange"}>
               <MenuLink
+                text="Acasa"
+                link="./"
+              />
+            </MenuItem>
+            <MenuItem bg={"orange"}>
+              <MenuLink
                 text="Regulament"
                 link="./regulament"
               />

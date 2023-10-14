@@ -14,6 +14,7 @@ export default function Main() {
 
   return (
     <Box
+      mx={["auto", "auto", "auto", 0]}
       fontWeight={700}
       maxWidth={"37em"}
       mt={["1em", "1em", "1em", "6.4em"]}

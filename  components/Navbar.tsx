@@ -33,7 +33,7 @@ export default function Navbar() {
         }, 500); // Adjust the interval for underline speed
         return () => clearInterval(underlineInterval);
       }
-    }, 150); // Adjust the interval for typing speed
+    }, 1); // Adjust the interval for typing speed
     return () => clearInterval(typingInterval);
   }, []);
 
@@ -44,16 +44,18 @@ export default function Navbar() {
     >
       <Link
         href="./"
+        textDecoration={"underline"}
         flexBasis={["60%", "60%", "60%", "40%"]}
         gap={2}
         fontWeight={700}
         fontSize={[24, 24, 24, 30]}
       >
-        {`Creanga ${displayText}${underline ? "_" : ""}`}
+        {`Creanga prin stiinte`}
       </Link>
       <HStack
         display={["none", "none", "none", "flex"]}
         gap={10}
+        pl={10}
         flexBasis={"50%"}
       >
         <MenuLink

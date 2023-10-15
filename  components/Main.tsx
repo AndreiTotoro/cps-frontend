@@ -36,7 +36,7 @@ export default function Main() {
           color={"white"}
           textDecor={"underline"}
         >
-          Proiectul <i>interdisciplinar</i> pentru elevii dornici să descopere
+          Proiect <i>interdisciplinar</i> pentru elevii dornici să descopere
           tainele științei.
         </Text>
       </Box>

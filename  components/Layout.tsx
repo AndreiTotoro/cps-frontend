@@ -25,7 +25,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       >
         <Stack minH={"100vh"}>
           <Navbar />
-          <Box flex={1}>{children}</Box>
+          <Box
+            mt={[0, 0, 0, "5em"]}
+            flex={1}
+          >
+            {children}
+          </Box>
           <Text
             fontSize={12}
             py={"2em"}

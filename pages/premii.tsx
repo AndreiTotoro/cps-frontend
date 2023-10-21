@@ -10,7 +10,6 @@ export default function Premii() {
         p={[2, 2, 2, 10]}
         bg={"#fb4f0e"}
         gap={5}
-        mt={["5em", "5em", "5em", 0]}
         w={["100%", "100%", "100%", "70%"]}
         flexDir={"column"}
         justify={"center"}

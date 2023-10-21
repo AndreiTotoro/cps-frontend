@@ -14,7 +14,6 @@ export default function Regulament() {
         flexDir={"column"}
         justify={"center"}
         align={"center"}
-        mt={["5em", "5em", "5em", 0]}
         justifyContent={"center"}
         mx={"auto"}
       >

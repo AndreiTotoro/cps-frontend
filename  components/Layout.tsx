@@ -26,7 +26,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Stack minH={"100vh"}>
           <Navbar />
           <Box
-            mt={[0, 0, 0, "2em"]}
+            mt={[0, 0, 0, "5em"]}
             flex={1}
           >
             {children}

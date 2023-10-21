@@ -21,12 +21,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Container
         maxW={1500}
         color={"white"}
-        px={[5, 5, 5, "5em"]}
+        px={[5, 5, 5, "2em"]}
       >
         <Stack minH={"100vh"}>
           <Navbar />
           <Box
-            mt={[0, 0, 0, "5em"]}
+            mt={["3em"]}
             flex={1}
           >
             {children}

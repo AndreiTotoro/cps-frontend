@@ -23,7 +23,7 @@ export default function Premii() {
           dropdownFile="https://creangaprinstiinte.files.wordpress.com/2023/05/rezultate-sectiunea-iii.pdf"
         />
         <Dropdown
-          dropdownTitle="Rezultate secțiunile I si III( participare indirectă) - participare indirecta 2023"
+          dropdownTitle="Rezultate secțiunile I si III- participare indirecta 2023"
           dropdownFile="https://creangaprinstiinte.files.wordpress.com/2022/07/regulament-creanga-prin-stiinte-2022_220711_164437.pdf"
         />
       </VStack>

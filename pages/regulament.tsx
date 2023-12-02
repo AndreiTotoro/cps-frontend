@@ -20,6 +20,7 @@ export default function Regulament() {
       API_URL + "get/regulamente"
     );
     setRegulamente(regulamente.data);
+    setIsLoading(false);
   };
 
   useEffect(() => {

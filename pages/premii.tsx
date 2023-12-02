@@ -18,6 +18,7 @@ export default function Premii() {
   const obtinePremii = async () => {
     const premii = await axios.get<Premiu[]>(API_URL + "get/premii");
     setPremii(premii.data);
+    setIsLoading(false);
   };
 
   useEffect(() => {

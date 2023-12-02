@@ -44,7 +44,13 @@ export default function Anunturi() {
         ) : anunturi && anunturi.length > 0 ? (
           anunturi?.map((anunt) => (
             <Box key={anunt.id}>
-              <Text fontSize={"2xl"}>{anunt.titlu}</Text>
+              <Text
+                color={"black"}
+                fontWeight={"bold"}
+                fontSize={"2xl"}
+              >
+                {anunt.titlu}
+              </Text>
               <Text>{anunt.continut}</Text>
             </Box>
           ))

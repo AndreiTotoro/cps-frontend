@@ -52,7 +52,12 @@ export default function Regulament() {
             />
           ))
         ) : (
-          <Text>Momentan, nu exista niciun regulament!</Text>
+          <Text
+            fontWeight={"bold"}
+            color={"black"}
+          >
+            Momentan, nu exista niciun regulament!
+          </Text>
         )}
       </VStack>
     </Layout>

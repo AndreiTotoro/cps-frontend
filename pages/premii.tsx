@@ -50,7 +50,12 @@ export default function Premii() {
             />
           ))
         ) : (
-          <Text>Momentan, nu exista niciun premiu!</Text>
+          <Text
+            fontWeight={"bold"}
+            color={"black"}
+          >
+            Momentan, nu exista niciun premiu!
+          </Text>
         )}
       </VStack>
     </Layout>

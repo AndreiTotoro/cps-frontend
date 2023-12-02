@@ -50,7 +50,12 @@ export default function Volume() {
             />
           ))
         ) : (
-          <Text>Momentan, nu exista niciun volum!</Text>
+          <Text
+            fontWeight={"bold"}
+            color={"black"}
+          >
+            Momentan, nu exista niciun volum!
+          </Text>
         )}
       </VStack>
     </Layout>

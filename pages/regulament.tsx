@@ -13,6 +13,7 @@ interface Regulament {
 
 export default function Regulament() {
   const [regulamente, setRegulamente] = useState<Regulament[] | []>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const obtineRegulamente = async () => {
     const regulamente = await axios.get<Regulament[]>(
@@ -39,7 +40,9 @@ export default function Regulament() {
         mx={"auto"}
       >
         <Text fontSize={"3xl"}>Regulament</Text>
-        {regulamente && regulamente.length > 0 ? (
+        {isLoading ? (
+          <Text>Se incarca...</Text>
+        ) : regulamente && regulamente.length > 0 ? (
           regulamente?.map((regulament) => (
             <Dropdown
               key={regulament.id}
@@ -48,7 +51,7 @@ export default function Regulament() {
             />
           ))
         ) : (
-          <Text>Se incarca...</Text>
+          <Text>Momentan, nu exista niciun regulament!</Text>
         )}
       </VStack>
     </Layout>

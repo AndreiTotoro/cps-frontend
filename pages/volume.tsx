@@ -13,10 +13,12 @@ interface Volum {
 
 export default function Volume() {
   const [volume, setVolume] = useState<Volum[] | []>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const obtineVolume = async () => {
     const volume = await axios.get<Volum[]>(API_URL + "get/volume");
     setVolume(volume.data);
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -37,7 +39,9 @@ export default function Volume() {
         mx={"auto"}
       >
         <Text fontSize={"3xl"}>Lista Volumelor Publicate</Text>
-        {volume && volume.length > 0 ? (
+        {isLoading ? (
+          <Text>Se incarca...</Text>
+        ) : volume && volume.length > 0 ? (
           volume?.map((volum) => (
             <Dropdown
               key={volum.id}
@@ -46,7 +50,7 @@ export default function Volume() {
             />
           ))
         ) : (
-          <Text>Se incarca...</Text>
+          <Text>Momentan, nu exista niciun volum!</Text>
         )}
       </VStack>
     </Layout>

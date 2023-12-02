@@ -13,6 +13,7 @@ interface Premiu {
 
 export default function Premii() {
   const [premii, setPremii] = useState<Premiu[] | []>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const obtinePremii = async () => {
     const premii = await axios.get<Premiu[]>(API_URL + "get/premii");
@@ -37,7 +38,9 @@ export default function Premii() {
         mx={"auto"}
       >
         <Text fontSize={"3xl"}>Premii</Text>
-        {premii && premii.length > 0 ? (
+        {isLoading ? (
+          <Text>Se incarca...</Text>
+        ) : premii && premii.length > 0 ? (
           premii?.map((premiu) => (
             <Dropdown
               key={premiu.id}
@@ -46,7 +49,7 @@ export default function Premii() {
             />
           ))
         ) : (
-          <Text>Se incarca...</Text>
+          <Text>Momentan, nu exista niciun premiu!</Text>
         )}
       </VStack>
     </Layout>

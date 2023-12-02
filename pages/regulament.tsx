@@ -1,9 +1,30 @@
 import Dropdown from "@/ components/Dropdown";
 import Layout from "@/ components/Layout";
+import { API_URL } from "@/constants";
 import { Box, Center, Divider, Stack, Text, VStack } from "@chakra-ui/react";
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+
+interface Regulament {
+  id: number;
+  titlu: string;
+  link: string;
+}
 
 export default function Regulament() {
+  const [regulamente, setRegulamente] = useState<Regulament[] | []>([]);
+
+  const obtineRegulamente = async () => {
+    const regulamente = await axios.get<Regulament[]>(
+      API_URL + "get/regulamente"
+    );
+    setRegulamente(regulamente.data);
+  };
+
+  useEffect(() => {
+    obtineRegulamente();
+  }, []);
+
   return (
     <Layout>
       <VStack
@@ -18,14 +39,17 @@ export default function Regulament() {
         mx={"auto"}
       >
         <Text fontSize={"3xl"}>Regulament</Text>
-        <Dropdown
-          dropdownTitle="Regulament Creanga Prin Stiinte 2023"
-          dropdownFile="https://creangaprinstiinte.files.wordpress.com/2023/04/regulament-creangaprinstiinte2023.pdf"
-        />
-        <Dropdown
-          dropdownTitle="Regulament Creanga Prin Stiinte 2022"
-          dropdownFile="https://creangaprinstiinte.files.wordpress.com/2022/07/regulament-creanga-prin-stiinte-2022_220711_164437.pdf"
-        />
+        {regulamente && regulamente.length > 0 ? (
+          regulamente?.map((regulament) => (
+            <Dropdown
+              key={regulament.id}
+              dropdownTitle={regulament.titlu}
+              dropdownFile={regulament.link}
+            />
+          ))
+        ) : (
+          <Text>Se incarca...</Text>
+        )}
       </VStack>
     </Layout>
   );

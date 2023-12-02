@@ -1,9 +1,28 @@
 import Dropdown from "@/ components/Dropdown";
 import Layout from "@/ components/Layout";
+import { API_URL } from "@/constants";
 import { Box, Center, Divider, Stack, Text, VStack } from "@chakra-ui/react";
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+
+interface Premiu {
+  id: number;
+  titlu: string;
+  link: string;
+}
 
 export default function Premii() {
+  const [premii, setPremii] = useState<Premiu[] | []>([]);
+
+  const obtinePremii = async () => {
+    const premii = await axios.get<Premiu[]>(API_URL + "get/premii");
+    setPremii(premii.data);
+  };
+
+  useEffect(() => {
+    obtinePremii();
+  }, []);
+
   return (
     <Layout>
       <VStack
@@ -18,14 +37,17 @@ export default function Premii() {
         mx={"auto"}
       >
         <Text fontSize={"3xl"}>Premii</Text>
-        <Dropdown
-          dropdownTitle="Rezultate sectiunea III - participare directa 2023"
-          dropdownFile="https://creangaprinstiinte.files.wordpress.com/2023/05/rezultate-sectiunea-iii.pdf"
-        />
-        <Dropdown
-          dropdownTitle="Rezultate secțiunile I si III- participare indirecta 2023"
-          dropdownFile="https://creangaprinstiinte.files.wordpress.com/2022/07/regulament-creanga-prin-stiinte-2022_220711_164437.pdf"
-        />
+        {premii && premii.length > 0 ? (
+          premii?.map((premiu) => (
+            <Dropdown
+              key={premiu.id}
+              dropdownTitle={premiu.titlu}
+              dropdownFile={premiu.link}
+            />
+          ))
+        ) : (
+          <Text>Se incarca...</Text>
+        )}
       </VStack>
     </Layout>
   );

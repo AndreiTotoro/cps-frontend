@@ -48,17 +48,19 @@ export default function Main() {
         <motion.div
           whileHover={shakeAnimation} // Apply the animation on hover
         >
-          <Button
-            rounded={["2xl", "2xl", "2xl", 0]}
-            fontSize={26}
-            shadow={"2xl"}
-            color={"white"}
-            height={"55px"}
-            w={"100%"}
-            bg={"#fc5310"}
-          >
-            Inscrie-te
-          </Button>
+          <Link href="https://forms.gle/nLNem2as87Nbnc3q9">
+            <Button
+              rounded={["2xl", "2xl", "2xl", 0]}
+              fontSize={26}
+              shadow={"2xl"}
+              color={"white"}
+              height={"55px"}
+              w={"100%"}
+              bg={"#fc5310"}
+            >
+              Inscrie-te
+            </Button>
+          </Link>
         </motion.div>
         <motion.div
           whileHover={shakeAnimation} // Apply the animation on hover

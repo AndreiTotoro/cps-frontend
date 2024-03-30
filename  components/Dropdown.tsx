@@ -5,7 +5,11 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Flex,
+  Link,
+  Text,
 } from "@chakra-ui/react";
+import { GoDownload } from "react-icons/go";
 import React from "react";
 
 export default function Dropdown({
@@ -16,37 +20,33 @@ export default function Dropdown({
   dropdownFile: string;
 }) {
   return (
-    <Accordion
+    <Link
+      href={dropdownFile}
       w={"100%"}
-      allowToggle
-      border={"3px solid black"}
+      border={"2px solid black"}
     >
-      <AccordionItem
+      <Box
         border={"3px solid black"}
         bg={"white"}
         color={"black"}
         fontWeight={"bold"}
       >
-        <h2>
-          <AccordionButton border={"3px solid black"}>
-            <Box
-              as="span"
-              flex="1"
-              textAlign="left"
-            >
-              {dropdownTitle}
-            </Box>
-            <AccordionIcon />
-          </AccordionButton>
-        </h2>
-        <AccordionPanel pb={4}>
-          <iframe
-            width={"100%"}
-            height={"600px"}
-            src={dropdownFile}
-          />
-        </AccordionPanel>
-      </AccordionItem>
-    </Accordion>
+        <Flex
+          px={2}
+          justify={"center"}
+          align={"center"}
+          gap={2}
+          border={"2px solid black"}
+        >
+          <Text
+            p={3}
+            align={"center"}
+          >
+            {dropdownTitle}
+          </Text>
+          <GoDownload size={"1.5em"} />
+        </Flex>
+      </Box>
+    </Link>
   );
 }
